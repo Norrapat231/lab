@@ -1,0 +1,18 @@
+#include <stdio.h>
+#include <string.h>
+
+void GetSet( int [], int * ) ;
+
+int main() 
+    {
+        int *data, num ;
+        GetSet( &data, &num ) ;
+        return 0 ;
+    }   //end function
+void GetSet(int data[], int *num)
+    {
+       data = 1; 
+       num = 30 ;
+       printf("data:%d\n",data);
+       printf("num:%d\n",num);
+    }
