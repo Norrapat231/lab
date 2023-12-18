@@ -1,18 +1,24 @@
 #include <stdio.h>
-#include <string.h>
 
-void GetSet( int [], int * ) ;
+void GetSet(int **data, int *num);
 
-int main() 
-    {
-        int *data, num ;
-        GetSet( &data, &num ) ;
-        return 0 ;
-    }   //end function
-void GetSet(int data[], int *num)
-    {
-       data = 1; 
-       num = 30 ;
-       printf("data:%d\n",data);
-       printf("num:%d\n",num);
+int main() {
+    int *data, num;
+    GetSet(&data, &num);
+    printf("Number in the array (%d)\n", num);
+    for (int i = 0; i < num; i++) {
+        printf("[%d] Member: [%d]\n", i + 1, data[i]);
     }
+    printf("-------End-------");
+    return 0;
+}
+
+void GetSet(int **data, int *num) {
+    printf("How many array: ");
+    scanf("%d",num);
+     printf("Number in the array:\n");
+    for (int i = 0; i < *num; i++) {
+        printf("Data member[%d]: ", i + 1);
+        scanf("%d", &(*data)[i]);
+    }
+}
