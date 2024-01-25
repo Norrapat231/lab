@@ -34,8 +34,4 @@ void explode( char str1[], char splitter, char str2[][10], int *count ) {
 	}//end for 2
 		
 		printf( "\ncount = %d", *count ) ;
-	
-		
-	
-		
-}
+	}
